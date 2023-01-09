@@ -22,44 +22,56 @@
     grid-template-columns: 1fr;
     color: white;
     font-family: 'Red Hat Display', sans-serif;
+    /* gap: 20px; */
 }
 
 .logo {
-    display: inline-block;
     text-align: center;
     font-size: 1.6em;
-    padding-left: 5px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.side-bar-nav {
-    padding-left: 2vw;
+.Dashboard {
+    justify-content: center;
+    padding-right: 15px;
+}
+
+.side-bar-nav,
+.side-bar-setting {
+    padding-left: 1vw;
     font-size: 1rem;
 }
 
-.side-bar-nav ul {
+.side-bar-nav ul,
+.side-bar-setting ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-li a {
+.side-bar-nav ul li,
+.side-bar-setting ul li {
+    padding: 10px;
+    position: relative;
+}
+
+.side-bar-nav ul li a,
+.side-bar-setting ul li a {
     padding-left: 10px;
     text-decoration: none;
     color: white;
+    position: absolute;
+    top: 14px;
 }
-
-.side-bar-nav ul li {
-    padding: 10px;
-}
-
-.side-bar-setting {}
 
 .header {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     background-color: #94B0B2;
-}
-
-img {
-    filter: url(red);
 }
 
 .main-contant {
