@@ -225,11 +225,12 @@
     display: grid;
     grid-template-columns: repeat(1, 2.3fr) 1fr;
     grid-template-rows: 35px;
-    padding: 15px 0px 0px 15px;
+    padding: 15px 15px 0px 15px;
 }
 
 .your-project-text,
-.announcements-text {
+.announcements-text,
+.trending-text {
     font-family: 'Red Hat Display', sans-serif;
     font-size: 1.3em;
     font-weight: 500;
@@ -277,7 +278,43 @@
     height: 23px;
 }
 
-.announcements-area {
+.right-sidebar {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.announcements,
+.trending {
+    height: 100%;
+}
+
+.announcements-text {
+    padding: 4px;
+}
+
+.notification-area {
+    background-color: #94B0B2;
+    border-radius: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.notification {
+    margin: 20px 20px 20px 20px;
+
+}
+
+.notification p {
+    font-size: 14px;
+}
+
+.notification:nth-child(2) {
+    padding: 20px 0px 20px 0px;
+    border-top: 1px solid #9333ea;
+    border-bottom: 1px solid #9333ea;
 }
