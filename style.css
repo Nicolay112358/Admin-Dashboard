@@ -170,7 +170,7 @@
     align-self: center;
 }
 
-.avata-palce img {
+img {
     height: 50px;
     width: 50px;
     border-radius: 100%;
@@ -279,42 +279,89 @@
 }
 
 .right-sidebar {
-    grid-row: 1 / 2;
+    grid-row: 1 / 3;
     grid-column: 2 / 3;
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
 }
 
-.announcements,
-.trending {
-    height: 100%;
+.announcements-area {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    padding-bottom: 15px;
 }
 
 .announcements-text {
-    padding: 4px;
+    padding-bottom: 8px;
+}
+
+.announcements {
+    height: calc(100% - 19px);
 }
 
 .notification-area {
+    padding: 25px;
+    padding: 0px 20px 0px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
     background-color: #94B0B2;
     border-radius: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
-.notification {
-    margin: 20px 20px 20px 20px;
-
+.notification-area .notification {
+    align-self: center;
+    flex-grow: 1;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 1em;
 }
 
-.notification p {
-    font-size: 14px;
+.notification h5 {
+    font-weight: 900;
 }
 
 .notification:nth-child(2) {
-    padding: 20px 0px 20px 0px;
-    border-top: 1px solid #9333ea;
-    border-bottom: 1px solid #9333ea;
+    border-top: solid 1px #9333ea;
+    border-bottom: solid 1px #9333ea;
+    flex-grow: 1;
+}
+
+.trending-text {
+    padding-bottom: 8px;
+}
+
+.trending-area {
+    background-color: #94B0B2;
+    border-radius: 10px;
+    padding: 20px;
+    height: calc(100% - 56px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.trending-img {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.trending-img div {
+    padding-left: 20px;
+}
+
+.nicname {
+    font-weight: 900;
+    font-size: 15px;
 }
