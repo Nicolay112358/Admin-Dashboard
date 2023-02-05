@@ -10,18 +10,24 @@
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr 4fr;
+    min-width: 1080px;
+    min-height: 900px;
 }
+
+/* style of side-bar */
 
 .side-bar {
     background-color: #00ADB5;
     grid-row: 1 / 3;
     grid-column: 1 / 2;
     min-height: 100vh;
+    min-width: 220px;
     display: grid;
     grid-template-rows: 1fr 4fr 5fr;
     grid-template-columns: 1fr;
     color: white;
     font-family: 'Red Hat Display', sans-serif;
+    padding-right: 10px;
 }
 
 .logo {
@@ -33,9 +39,18 @@
     gap: 10px;
 }
 
+.logoLink {
+    color: white;
+}
+
 .Dashboard {
     justify-content: center;
     padding-right: 15px;
+}
+
+.dashboardLink {
+    color: white;
+    text-decoration: none;
 }
 
 .side-bar-nav {
@@ -67,15 +82,41 @@
     text-decoration: none;
     display: inline-block;
     color: white;
-    position: relative;
 }
 
-.side-bar-nav ul li a span,
-.side-bar-setting ul li a span {
-    padding-left: 10px;
-    position: absolute;
-    top: 4px;
+.side-bar-nav ul li a,
+.side-bar-setting ul li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 35px;
 }
+
+
+.side-bar-nav ul li a p,
+.side-bar-setting ul li a p {
+    padding-left: 10px;
+}
+
+.side-bar-nav ul li a:hover,
+.side-bar-setting ul li a:hover,
+.side-bar-nav ul li a:hover,
+.side-bar-setting ul li a:hover {
+    background-color: #9333ea;
+    border-radius: 8px;
+}
+
+.side-bar-nav ul li a:active,
+.side-bar-setting ul li a:active,
+.side-bar-nav ul li a:active,
+.side-bar-setting ul li a:active {
+    color: #201925;
+    box-shadow: inset 1px 1px 3px #B093C5;
+
+}
+
+/* style of header */
 
 .header {
     grid-row: 1 / 2;
@@ -83,7 +124,7 @@
     background-color: #94B0B2;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: 2fr 1.5fr;
+    grid-template-columns: 3fr 1.5fr;
     padding: 0 35px 0 15px;
 }
 
@@ -105,6 +146,7 @@
 
 .input {
     width: 100%;
+    min-width: 600px;
     height: 50%;
     outline: 0;
     border: 0;
@@ -124,6 +166,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.searchButton img:hover {
+    transform: scale(1.4, 1.4);
+}
+
+.searchButton img:active {
+    transform: scale(1, 1);
 }
 
 .beII button {
@@ -176,6 +226,15 @@ img {
     border-radius: 100%;
 }
 
+.bell-img:hover {
+    transform: scale(1.4, 1.4);
+}
+
+.bell-img:active {
+    transform: scale(1, 1);
+}
+
+
 .user {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
@@ -212,11 +271,22 @@ img {
     text-align: center;
 }
 
-.button-area button a {
+.button-area button {
     color: white;
     font-weight: 800;
     text-decoration: none;
 }
+
+.button-area button:hover {
+    background-color: #FFE9FF;
+    color: black;
+}
+
+.button-area button:active {
+    box-shadow: inset 3px 3px 5px black;
+}
+
+/* main part of page style */
 
 .main-contant {
     grid-row: 2 / 3;
@@ -277,6 +347,17 @@ img {
 .project-button img {
     height: 23px;
 }
+
+.project-button img:hover {
+    transform: scale(1.4, 1.4);
+}
+
+.project-button img:active {
+    transform: scale(1, 1);
+}
+
+
+/* right panel  style*/
 
 .right-sidebar {
     grid-row: 1 / 3;
